@@ -1,0 +1,286 @@
+/* styles.css - sem frameworks */
+/* Comentários: responsividade, tema claro/escuro e estilização das seções principais */
+
+/* Cores / variáveis */
+:root {
+  --bg: #f7f7fb;
+  --card: #54317c;
+  --text: #000000;
+  --accent: #ab64d4;
+  --muted: #411753;
+}
+
+body.light {
+  --bg: #e5e5f3;
+  --card: #fcfbfc;
+  --text: #000000;
+  --muted: #000000;
+}
+
+body.dark {
+  --bg: #0f1020;
+  --card: #11121a;
+  --text: #e6e6f0;
+  --muted: #ffffff;
+}
+
+/* Suavidade na troca de tema */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  transition: background .3s ease, color .3s ease;
+}
+
+
+/* ------------------------------
+   LAYOUT GERAL
+------------------------------*/
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+/* ------------------------------
+   HEADER
+------------------------------*/
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .9rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  padding: .4rem .6rem;
+  border-radius: 6px;
+}
+
+.nav a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.controls {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+
+/* ------------------------------
+   PROFILE (foto + texto)
+------------------------------*/
+.profile {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  padding-top: 4rem; /* Compensa header fixo */
+}
+
+.avatar {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid var(--accent);
+  box-shadow: 0 8px 20px rgba(123, 97, 255, 0.25);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 28px rgba(123, 97, 255, 0.35);
+}
+
+.lead {
+  margin-top: .4rem;
+  font-weight: 600;
+}
+
+.contact-inline {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: .6rem 0;
+  flex-wrap: wrap;
+}
+
+.contact-inline li {
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+.location {
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+
+/* ------------------------------
+   SEÇÕES
+------------------------------*/
+.section { padding: 3rem 0; }
+
+.alt {
+  background: linear-gradient(180deg, rgba(0,0,0,0.03), transparent);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--accent);
+  padding-left: .8rem;
+}
+
+
+/* ------------------------------
+   CARDS
+------------------------------*/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card,
+.experience {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+
+/* ------------------------------
+   SKILLS
+------------------------------*/
+.skills-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .6rem;
+}
+
+
+/* ------------------------------
+   FORMULÁRIO
+------------------------------*/
+form {
+  display: grid;
+  gap: .6rem;
+  max-width: 640px;
+}
+
+input, textarea {
+  padding: .6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.8);
+}
+
+button[type="submit"] {
+  padding: .8rem 1rem;
+  border-radius: 10px;
+  border: 0;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.feedback {
+  margin-top: .6rem;
+  padding: .6rem;
+  border-radius: 8px;
+}
+
+
+/* ------------------------------
+   FOOTER
+------------------------------*/
+.site-footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  font-size: .9rem;
+}
+
+
+/* ------------------------------
+   RESPONSIVIDADE
+------------------------------*/
+@media (max-width: 780px) {
+
+  .nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .profile {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+body.dark .site-header {
+  background: rgba(10, 10, 20, 0.96);          /* fundo escuro */
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+body.dark .nav a {
+  color: #f5f5ff;                              /* links bem visíveis */
+}
+
+body.dark .nav a:hover {
+  background: rgba(255,255,255,0.08);
+}

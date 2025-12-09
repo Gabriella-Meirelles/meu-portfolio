@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gabriella Meirelles — Portfólio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Comentário: Este é o arquivo principal do portfólio single-page. -->
+</head>
+<body class="light">
+  <!-- Cabeçalho fixo com navegação por âncoras -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#sobre">Portfólio Gabriella Meirelles</a>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#formacao">Formação</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#portfolio">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="controls">
+        <button id="themeToggle" aria-label="Trocar tema">Tema</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+    <script>src="Trabalho-Ferremantas-WEB/css/js"</script>
+  </header>
+
+  <main>
+    <!-- SOBRE (seção principal) -->
+    <section id="sobre" class="section container">
+      <div class="profile">
+        <!-- Coloque sua foto em images/avatar.jpg -->
+    <img src="imagens/foto.jpeg" alt="Foto de Perfil" class="avatar"/>
+        <div class="profile-text">
+          <h1>Gabriella da Costa Meirelles</h1>
+          <p class="lead">Sou uma pessoa dedicada, entusiasmada, pontual e com muita vontade de aprender.</p>
+
+          <!-- Resumo Profissional retirado do currículo -->
+          <p><strong>Resumo profissional:</strong> Estudante de Tecnologia em Ciência de Dados com base em Python e MySQL e experiência prévia em segurança digital. Vivência prática em modelagem e implementação de banco de dados. Interesse em análise de dados e cibersegurança, com perfil proativo e comunicativo.</p>
+
+          <!-- Contato rápido -->
+          <ul class="contact-inline">
+            <li>📞 (21) 97078-9521</li>
+            <li>✉ <a href="mailto:gab_mei@hotmail.com">gab_mei@hotmail.com</a></li>
+            <li>🔗 <a href="https://www.linkedin.com/in/gabriella-meirelles/" target="_blank" rel="noopener">linkedin.com/in/gabriella-meirelles</a></li>
+          </ul>
+
+          <p class="location">Rua Nelselino dos Santos, Lote 12 Quadra N — Maricá, RJ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMAÇÃO -->
+    <section id="formacao" class="section alt container">
+      <h2>Formação</h2>
+      <ul class="education-list">
+        <li>
+          <h3>Tecnologia em Ciência de Dados — Centro Universitário Internacional (Uninter)</h3>
+          <p>Período: Início: Fev/2025 — Previsão: Set/2027</p>
+        </li>
+        <li>
+          <h3>Ensino Médio — Ciep 032 Cora Coralina</h3>
+          <p>Período: 2012 – 2014</p>
+        </li>
+        <li>
+          <h3>Idiomas</h3>
+          <p>Português: Nativo • Inglês: Intermediário</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia" class="section container">
+      <h2>Experiência Profissional</h2>
+
+      <article class="experience">
+        <h3>SDR — Sales Development Representative</h3>
+        <p><em>Contacta Segurança Digital</em> — Abril 2022 a Dez 2023</p>
+        <ul>
+          <li>Qualificação de leads e prospecção ativa na área de segurança digital.</li>
+          <li>Aplicação de conhecimentos em conceitos de cibersegurança: Phishing, CASB, LGPD e Firewalls.</li>
+          <li>Desenvolvimento de comunicação técnica comercial e rápida absorção de temas técnicos complexos.</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <!-- PORTFÓLIO / PROJETOS ACADÊMICOS -->
+    <section id="portfolio" class="section alt container">
+      <h2>Projetos Acadêmicos</h2>
+      <p>Projetos realizados durante a graduação e disciplinas práticas.</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Modelagem e Implementação de Banco de Dados</h3>
+          <p>Modelagem conceitual (ERD) e implementação no MySQL com criação de tabelas, relacionamentos e consultas SQL.</p>
+        </article>
+
+        <article class="card">
+          <h3>Lógica de Programação com Python</h3>
+          <p>Algoritmos básicos em Python (Pycharm e Google Colab): estruturas de dados, controle de fluxo e funções.</p>
+        </article>
+
+        <!-- Espaço para adicionar mais projetos -->
+      </div>
+    </section>
+
+    <!-- CONHECIMENTOS -->
+    <section id="conhecimentos" class="section container">
+      <h2>Conhecimentos Técnicos</h2>
+      <ul class="skills-grid">
+        <li><strong>Linguagens:</strong> Python (básico), SQL (MySQL)</li>
+        <li><strong>Ferramentas:</strong> Pycharm, Google Colab</li>
+        <li><strong>Conceitos:</strong> Modelagem de Banco de Dados, Noções de Análise de Dados, Segurança Digital (Phishing, CASB, LGPD, Firewall)</li>
+      </ul>
+    </section>
+
+    <!-- CONTATO / FORMULÁRIO -->
+    <section id="contato" class="section alt container">
+      <h2>Contato</h2>
+      <p>Preencha o formulário abaixo para enviar uma mensagem:</p>
+
+      <form id="contactForm" novalidate>
+        <!-- Comentário: validação feita em js/script.js -->
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" required placeholder="Seu nome completo" />
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required placeholder="seu@email.com" />
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Escreva sua mensagem"></textarea>
+
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+
+      <div class="contact-info">
+        <p>Telefone: (21) 97078-9521</p>
+        <p>Email: <a href="mailto:gab_mei@hotmail.com">gab_mei@hotmail.com</a></p>
+      </div>
+
+      <div id="formFeedback" class="feedback" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Gabriella da Costa Meirelles — Tecnologia em Ciência de Dados</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/gabriella-meirelles/" target="_blank" rel="noopener">gabriella-meirelles</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
